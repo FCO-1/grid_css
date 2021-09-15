@@ -25,3 +25,16 @@
     background-color: beige;
     grid-area: sd;
 }
+
+.aside {
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;padding-left:0;
+    margin-bottom:0;
+}
+
+.side-vendedor {
+    background-color: rgb(248, 244, 16);
+}
+
