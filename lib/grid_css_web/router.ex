@@ -18,6 +18,8 @@ defmodule GridCssWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+
+    live "/prueba1", Prueba1Live.Index, :index
   end
 
   # Other scopes may use custom stacks.
