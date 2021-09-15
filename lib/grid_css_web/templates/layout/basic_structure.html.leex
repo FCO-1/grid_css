@@ -8,13 +8,18 @@
     <%= csrf_meta_tag() %>
     <%= live_title_tag assigns[:page_title] || "GridCss", suffix: " · Phoenix Framework" %>
     <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/grid-areas.css") %>"/>
+    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"> </script>
     </head>
     <body>
         <div class="wrapper">
             <div class="header">Header</div>
-            <div class="sidebar">Sidebar</div>
-            <div class="content">Content</div>
+            <div class="sidebar">
+                <%= render "partials/sidebar.html" %>
+            </div>
+            <div class="content">
+                <%= @inner_content %>
+            </div>
             <div class="footer">Footer</div>
         </div>
     </body>

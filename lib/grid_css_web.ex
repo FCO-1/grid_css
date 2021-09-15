@@ -31,7 +31,9 @@ defmodule GridCssWeb do
     quote do
       use Phoenix.View,
         root: "lib/grid_css_web/templates",
-        namespace: GridCssWeb
+        namespace: GridCssWeb,
+        ## multi folder template support
+        pattern: "**/*"
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
